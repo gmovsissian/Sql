@@ -20,13 +20,20 @@
         android:layout_below="@id/name"
         android:hint="Age"
         />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/age"
+        android:id="@+id/id"
+        android:hint="ID"
+        android:textSize="20dp"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/save"
         android:hint="Save"
         android:textSize="20dp"
-        android:layout_below="@id/age"/>
+        android:layout_below="@id/id"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,5 +41,20 @@
         android:textSize="20dp"
         android:layout_below="@id/save"
         android:id="@+id/go"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/go"
+        android:id="@+id/update"
+        android:hint="Update"
+        android:textSize="20dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Delete"
+        android:layout_below="@id/update"
+        android:id="@+id/delete"
+        android:textSize="20dp"/>
+
 
 </RelativeLayout>

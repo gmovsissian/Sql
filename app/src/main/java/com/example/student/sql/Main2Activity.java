@@ -29,6 +29,7 @@ public class Main2Activity extends AppCompatActivity {
                    stringBuilder.append("Id "+cursor.getString(0)+"\n");
                    stringBuilder.append("Name "+cursor.getString(1)+"\n");
                    stringBuilder.append("Age "+cursor.getString(2)+"\n");
+
                }
                textview.setText(stringBuilder);
            }

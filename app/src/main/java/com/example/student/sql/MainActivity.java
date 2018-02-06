@@ -13,6 +13,9 @@ EditText nametext;
 EditText agetext;
 Button save;
 Button go;
+EditText idtext;
+Button update;
+Button delete;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +24,9 @@ Button go;
         agetext=findViewById(R.id.age);
         save=findViewById(R.id.save);
         go=findViewById(R.id.go);
+        idtext=findViewById(R.id.id);
+        update=findViewById(R.id.update);
+        delete=findViewById(R.id.delete);
         final DbHelper dbHelper=new DbHelper(this);
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +48,21 @@ Button go;
                 startActivity(intent);
             }
         });
-
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name=nametext.getText().toString();
+                String age=agetext.getText().toString();
+                String id=idtext.getText().toString();
+                dbHelper.myupdate(id,name,age);
+            }
+        });
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String id=idtext.getText().toString();
+                dbHelper.mydelete(id);
+            }
+        });
     }
 }
